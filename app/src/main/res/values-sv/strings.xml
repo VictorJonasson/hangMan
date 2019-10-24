@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">hangMan</string>
+    <string name="button_about_me_text">Vem gjorde denna skiten</string>
+    <string name="logotype_content">logotype</string>
+    <string name="play_game_text">Häng Honom!</string>
+    <string name="about_me_text">Så, vem är jag?  \n\nNå, se bara på denhär appen och du ser säkert att jag är så nära inpå en verklig Kjell Bergkvist mankan komma.\n\nDom kallar mig för, \nVictor Jonasson</string>
+    <string name="gallow_img">gallow_img</string>
+    <string name="enter_guess">Enter guess</string>
+</resources>

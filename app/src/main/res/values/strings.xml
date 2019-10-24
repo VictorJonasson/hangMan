@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">hangMan</string>
+    <string name="button_about_me_text">Who made this crap?</string>
+    <string name="logotype_content">logotype</string>
+    <string name="play_game_text">Hang Him!</string>
+    <string name="about_me_text">So, who am i?  \n\nWell just look at this app and you will see that im as close to be a real life Neo as you can get.\n\nThey call me \nVictor Jonasson</string>
+    <string name="gallow_img">gallow_img</string>
+    <string name="enter_guess">Enter guess</string>
+</resources>
