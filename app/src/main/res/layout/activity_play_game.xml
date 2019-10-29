@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#313131"
+    android:background="@color/colorPrimary"
     tools:context=".playGame">
 
     <ImageView
-        android:id="@+id/gallowView"
+        android:id="@+id/iv_gallowView"
         android:layout_width="285dp"
         android:layout_height="307dp"
         android:contentDescription="@string/gallow_img"
@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/gallow1" />
 
     <TextView
-        android:id="@+id/right_answer"
+        android:id="@+id/tv_rightAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
@@ -29,37 +29,79 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_triesLeft"
+        app:layout_constraintVertical_bias="0.019" />
 
     <EditText
-        android:id="@+id/charGuess"
-        android:layout_width="149dp"
-        android:layout_height="48dp"
+        android:id="@+id/et_charGuess"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/enter_guess"
         android:inputType="textPersonName"
         android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gallowView"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_gallowView"
+        app:layout_constraintVertical_bias="0.427"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/guessButton"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="buttonTap"
         android:text="@string/enter_guess"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/et_charGuess"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/et_charGuess"
+        app:layout_constraintTop_toBottomOf="@+id/et_charGuess"
+        app:layout_constraintVertical_bias="0.198" />
+
+    <TextView
+        android:id="@+id/tv_triesLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/tries_left"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guessButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/charGuess"
-        app:layout_constraintVertical_bias="0.117"
-        android:onClick="buttonTap"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.558" />
+
+    <TextView
+        android:id="@+id/tv_failedGuess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/et_charGuess"
+        app:layout_constraintStart_toStartOf="@+id/et_charGuess"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617" />
+
+    <TextView
+        android:id="@+id/tv_failedLetters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/failed_used_letters"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tv_failedGuess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rightAnswer"
+        app:layout_constraintVertical_bias="0.823"
+        tools:text="@string/failed_used_letters" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

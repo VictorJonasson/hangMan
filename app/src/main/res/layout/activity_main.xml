@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#313131"
+    android:background="@color/colorPrimary"
     tools:context=".MainActivity">
 
     <Button
@@ -23,20 +23,19 @@
         android:id="@+id/aboutMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="aboutMe"
         android:text="@string/button_about_me_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playGame"
-        app:layout_constraintVertical_bias="0.18"
-        android:onClick="aboutMe"
-        />
+        app:layout_constraintVertical_bias="0.18" />
 
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="272dp"
-        android:layout_height="95dp"
+        android:id="@+id/iv_hangHimLogo"
+        android:layout_width="356dp"
+        android:layout_height="156dp"
         android:contentDescription="@string/logotype_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,5 +44,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.317"
         app:srcCompat="@drawable/hanghim" />
+
+    <Switch
+        android:id="@+id/sw_soundSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startMedia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutMe"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

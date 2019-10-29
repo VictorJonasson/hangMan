@@ -6,4 +6,13 @@
     <string name="about_me_text">So, who am i?  \n\nWell just look at this app and you will see that im as close to be a real life Neo as you can get.\n\nThey call me \nVictor Jonasson</string>
     <string name="gallow_img">gallow_img</string>
     <string name="enter_guess">Enter guess</string>
+    <string name="tries_left">Tries left</string>
+    <string name="triesLeftCounter">Tries left: </string>
+    <string name="used_letters">Used letters:</string>
+    <string name="failed_used_letters">Wrong letters</string>
+    <string name="hang_another_pesant">Hang another pesant</string>
+    <string name="win_logo">win_Logo</string>
+    <string name="back_to_start">Back to start</string>
+    <string name="sorry_william">William, just take a deep breath, cus now you aint getting rid of this perfect GoT-cover.</string>
+    <string name="about_me_logo">about_me_logo</string>
 </resources>
